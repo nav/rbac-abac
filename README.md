@@ -10,6 +10,8 @@ implementation of [Casbin](https://casbin.org/).
 There are three main files in the project:
  - model.conf
  - policy.csv
+ - entities.py
+ - conftest.py
  - tests.py
  
 ### model.conf
@@ -22,11 +24,19 @@ policies defined in the `policy.csv` file.
 This file contains all the policies that can be applied when enforcing
 set of rules defined in the file above.
 
+### entities.py
+
+This file contains Entites to be used in the authorization domain.
+
+### conftest.py
+
+This file contains test fixtures used by `pytest`.
+
+
 ### tests.py
 
-This file is a specification and implementation of Subjects, Resources, 
-and Actions. It includes tests to verify and validate rules evaluated
-by Casbin.
+This file contains tests  to verify and validate rules evaluated by 
+Casbin engine.
 
 
 ## Run tests
