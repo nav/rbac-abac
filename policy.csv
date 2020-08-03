@@ -1,0 +1,27 @@
+p, role:user, resource:order, action:read
+p, role:user, resource:order, action:write
+p, role:user, resource:order, action:change
+p, role:approver, resource:order, action:read
+p, role:approver, resource:order, action:approve
+p, role:manager, resource:settings, action:manage
+p, role:user_manager, resource:settings:user, action:manage
+p, role:finance_manager, resource:settings:finance, action:manage
+
+g, user:alice, role:user
+g, user:bob, role:user
+g, user:charlie, role:user
+g, user:charlie, role:approver
+g, user:doug, role:approver
+g, user:eli, role:manager
+g, user:frank, role:user_manager
+g, user:gary, role:finance_manager
+
+g, role:manager, role:user_manager
+g, role:manager, role:finance_manager
+
+g, role:admin, role:user
+g, role:admin, role:approver
+g, role:admin, role:manager
+
+g, user:zaphod, role:admin
+
